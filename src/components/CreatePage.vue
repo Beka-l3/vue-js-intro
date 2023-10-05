@@ -63,8 +63,6 @@ export default {
             return true;
         }
     },
-    
-    // props: ['pageCreated'],
 
     computed: {
         isFormInvalid() {
@@ -98,16 +96,6 @@ export default {
                 },
                 published: this.published
             });
-
-            // this.pageCreated({
-            //     pageTitle: this.pageTitle,
-            //     content: this.content,
-            //     link: {
-            //         text: this.linkText,
-            //         url: this.linkURL
-            //     },
-            //     published: this.published
-            // })
 
             this.pageTitle = '';
             this.content = '';
