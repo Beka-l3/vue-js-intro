@@ -9,14 +9,13 @@
                     v-for="(page, index) in publishedPages" class="nav-item" :key="index"
                     :page="page"
                     :index="index"
-                    :isActive="activePage == index"
-                    @activated="$emit('activated')"
                 ></navbar-link>
 
                 <li>
                     <router-link
                         :to="`/createPage`"
                         class="nav-link"
+                        active-class="active"
                         aria-current="page" 
                     >Create page</router-link>
                 </li>
@@ -47,15 +46,16 @@ export default {
          }
     },
 
-    props: ['pages', 'activePage'],
-
     created() {
         this.getThemeSetting()
+
+        this.pages = this.$pages.getAllPages();
     },
 
     data() {
         return {
             theme: 'light',
+            pages: [],
         }
     },
 
