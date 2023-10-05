@@ -46,8 +46,25 @@
 
 <script>
 export default {
+    emits: {
+        pageCreated(pageTitle, content, link) {
+            if (!pageTitle) {
+                return false;
+            }
 
-    props: ['pageCreated'],
+            if (!content) {
+                return false;
+            }
+
+            if (!link || !link.text || !link.url) {
+                return false;
+            }
+
+            return true;
+        }
+    },
+    
+    // props: ['pageCreated'],
 
     computed: {
         isFormInvalid() {
