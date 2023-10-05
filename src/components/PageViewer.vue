@@ -1,22 +1,14 @@
 <template>
     <div class="container">
         <h1>Page Title</h1>
-        <p>Content</p>
+        <p>{{ $route.params.index }}</p>
     </div>
 </template>
 
 <script>
 export default {
-    props: {
-        page: {
-            type: Object,
-            default(rawProps) {
-                return {
-                    pageTitle: '',
-                    content: ''
-                };
-            }
-        }
+    created() {
+        // this.$route.params
     }
 }
 </script>
