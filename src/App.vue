@@ -6,6 +6,8 @@
       :active-page="activePage"
   ></navbar>
 
+  <router-view></router-view>
+
   <!-- <page-viewer
       v-if="pages.length > 0"
       :page="pages[activePage]"

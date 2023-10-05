@@ -6,7 +6,7 @@ const router = createRouter({
     history: createWebHashHistory(),
     routes: [
         { path: '/', component: PageViewer },
-        { path: '/create', component: CreatePage }
+        { path: '/createPage', component: CreatePage }
     ]
 })
 
