@@ -15,7 +15,7 @@
         </thead>
 
         <tbody>
-            <tr v-for="(page, index) in $pages.getAllPages()" :key="index">
+            <tr v-for="(page, index) in $pages.getAllPages()" :key="index" @click.prevent="goToPage(index)">
                 <td>{{ page.pageTitle }}</td>
                 <td>{{ page.link.text }}</td>
                 <td>{{ page.published ? 'Yes' : 'No' }}</td>
@@ -28,10 +28,15 @@
 
 <script setup>
 import {ref, reactive, inject} from 'vue';
+import { useRouter } from 'vue-router';
 
 const data = reactive({counter: 0});
 const $pages = inject('$pages');
+const router = useRouter();
 
+function goToPage(index) {
+    router.push({ path: `pages/${index}/edit`});
+}
 
 </script>
 
