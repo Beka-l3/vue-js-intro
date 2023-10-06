@@ -1,11 +1,24 @@
 <template>
     
-    <h3>Hola</h3>
+    <p>{{ counter }}</p>
+    <button @click.prevent="click">Increment</button>
 </template>
 
 
 <script>
+export default {
+    data() {
+        return {
+            counter: 0
+        };
+    },
 
+    methods: {
+        click() {
+            this.counter++;
+        }
+    }
+}
 
 </script>
 
