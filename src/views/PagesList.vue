@@ -15,7 +15,7 @@
             >
                 <td>{{ page.pageTitle }}</td>
                 <td>{{ page.link.text }}</td>
-                <td>{{ page.published }}</td>
+                <td>{{ page.published ? 'Yes' : 'No' }}</td>
             </tr>
         </tbody>
     </table>
