@@ -5,20 +5,28 @@
 </template>
 
 
-<script>
-export default {
-    data() {
-        return {
-            counter: 0
-        };
-    },
+<script setup>
+let counter = 0;
 
-    methods: {
-        click() {
-            this.counter++;
-        }
-    }
+function Increment() {
+    counter++;
 }
+
+
+
+// export default {
+//     data() {
+//         return {
+//             counter: 0
+//         };
+//     },
+
+//     methods: {
+//         click() {
+//             this.counter++;
+//         }
+//     }
+// }
 
 </script>
 
