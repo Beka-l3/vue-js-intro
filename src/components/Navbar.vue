@@ -13,7 +13,7 @@
 
                 <li>
                     <router-link
-                        :to="`/createPage`"
+                        :to="`/pages/create`"
                         class="nav-link"
                         active-class="active"
                         aria-current="page" 
