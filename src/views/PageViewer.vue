@@ -11,11 +11,6 @@ export default {
 
     created() {
         this.page = this.$pages.getSinglePage(this.index);
-
-        // this.$watch(() => this.$route.params, (newParams, oldParams) => {
-        //     this.page = this.$pages.getSinglePage(newParams.index);
-        // });
-
     },
 
     data() {
@@ -31,3 +26,4 @@ export default {
     }
 }
 </script>
+ 
