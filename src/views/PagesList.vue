@@ -10,8 +10,8 @@ import {ref, reactive} from 'vue';
 
 const counter = ref(0);
 
-function Increment() {
-    counter++;
+function click() {
+    counter.value++;
 }
 
 
