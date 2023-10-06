@@ -5,7 +5,7 @@
         <router-link to="/pages/create" class="btn btn-primary btn-sm">New page</router-link>
     </div>
 
-    <table class="table table-striped table-hover">
+    <table class="table table-hover">
         <thead>
             <tr>
                 <th>Title</th>
@@ -42,7 +42,9 @@ function goToPage(index) {
 
 
 <style scoped>
-
+.table.table-hover tr:hover {
+    cursor: pointer;
+}
 
 </style>
 
