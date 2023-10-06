@@ -6,7 +6,9 @@
 
 
 <script setup>
-let counter = 0;
+import {ref, reactive} from 'vue';
+
+const counter = ref(0);
 
 function Increment() {
     counter++;
