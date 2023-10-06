@@ -40,6 +40,8 @@ export default {
         NavbarLink
     },
 
+    inject: ['$pages'],
+
     computed: {
          publishedPages() {
             return this.pages.filter(p => p.published)
